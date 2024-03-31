@@ -8,6 +8,7 @@ buildscript {
         hilt_version = '2.48'
         hilt_compose_version = '1.1.0'
         navigation_version = '2.7.5'
+        retrofit_version = '2.9.0'
     }
 }
 

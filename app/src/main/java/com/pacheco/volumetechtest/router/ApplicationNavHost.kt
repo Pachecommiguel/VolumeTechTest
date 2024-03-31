@@ -1,4 +1,4 @@
-package com.pacheco.volumetechtest.ui.router
+package com.pacheco.volumetechtest.router
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController

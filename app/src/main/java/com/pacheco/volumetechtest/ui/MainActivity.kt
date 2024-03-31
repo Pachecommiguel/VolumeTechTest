@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.pacheco.volumetechtest.ui.router.ApplicationNavHost
+import com.pacheco.volumetechtest.router.ApplicationNavHost
 import com.pacheco.volumetechtest.ui.theme.VolumeTechTestTheme
 import com.pacheco.volumetechtest.ui.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
