@@ -4,5 +4,5 @@ import com.pacheco.volumetechtest.data.dto.WeatherDto
 import com.pacheco.volumetechtest.domain.model.WeatherModel
 
 interface WeatherMapper {
-    fun toModel(dto: WeatherDto): WeatherModel
+    fun toModel(dto: WeatherDto?): WeatherModel
 }

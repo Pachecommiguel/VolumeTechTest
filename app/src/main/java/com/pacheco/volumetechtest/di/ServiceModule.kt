@@ -1,4 +1,4 @@
-package com.pacheco.volumetechtest.data.di
+package com.pacheco.volumetechtest.di
 
 import com.pacheco.volumetechtest.data.RetrofitClient
 import com.pacheco.volumetechtest.data.service.WeatherService
