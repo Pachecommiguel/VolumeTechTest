@@ -45,30 +45,31 @@ private fun WeatherLayer(viewModel: MainViewModel) {
         mutableStateOf(null)
     }
 
-    var alignment: Alignment? by remember {
-        mutableStateOf(null)
+    var alignment: Pair<Alignment?, Alignment.Horizontal?> by remember {
+        mutableStateOf(null to null)
     }
 
     LaunchedEffect(key1 = Unit) {
         while (true) {
-            alignment = when(alignment) {
-                Alignment.TopStart -> Alignment.TopEnd
-                Alignment.TopEnd -> Alignment.TopStart
-                else -> Alignment.TopStart
+            alignment = when(alignment.first) {
+                Alignment.TopStart -> Alignment.TopEnd to Alignment.End
+                Alignment.TopEnd -> Alignment.TopStart to Alignment.Start
+                else -> Alignment.TopStart to Alignment.Start
             }
-            delay(TimeUnit.SECONDS.toMillis(30))
+            delay(timeMillis = TimeUnit.SECONDS.toMillis(30))
         }
     }
 
     weather?.let {
         Box(
-            contentAlignment = alignment ?: Alignment.TopStart,
+            contentAlignment = alignment.first ?: Alignment.TopStart,
             modifier = Modifier.fillMaxWidth()
         ) {
             Column(
                 modifier = Modifier
                     .background(color = Color.Blue)
-                    .padding(all = 10.dp)
+                    .padding(all = 10.dp),
+                horizontalAlignment = alignment.second ?: Alignment.Start
             ) {
                 Text(text = it.temp.toString() + "ºC")
                 Text(text = it.city)

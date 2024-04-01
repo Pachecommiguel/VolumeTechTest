@@ -20,7 +20,7 @@ class MainViewModel @Inject constructor(
         }) {
             while (currentCoroutineContext().isActive) {
                 onSuccess(getWeatherUseCase())
-                delay(TimeUnit.HOURS.toMillis(1))
+                delay(timeMillis = TimeUnit.HOURS.toMillis(1))
             }
         }
     }
